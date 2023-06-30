@@ -1,11 +1,13 @@
 import "./App.css";
-import ListOfCountries from "./ListOfCountries";
+import Header from "./Header";
+import Initialization from "./Initialization";
 
 function App() {
   return (
-    <main>
-      <ListOfCountries />
-    </main>
+    <div>
+      <Header />
+      <Initialization />
+    </div>
   );
 }
 

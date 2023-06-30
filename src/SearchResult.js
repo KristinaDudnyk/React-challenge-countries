@@ -1,7 +1,8 @@
 import React from "react";
-import data from "./data/data.json";
 
-export default function ListOfCountries() {
+export default function SearchResult({ data }) {
+  // console.log("SearchResult function component ran");
+  // console.log("SearchResult prop data:", data);
   return (
     <div className="main-cards-container">
       {data.map((element, index) => (
@@ -9,19 +10,11 @@ export default function ListOfCountries() {
           <div
             className="cards-image"
             style={{
-              backgroundImage: `url(${element.flag})`,
+              backgroundImage: `url(${element.flags.svg})`,
             }}
           ></div>
-          {/* <div className="image-container">
-            holla
-            <img
-              src={element.flag}
-              alt={element.name}
-              className="cards-image"
-            ></img>
-          </div> */}
           <div className="card-info">
-            <h2>{element.name}</h2>
+            <h2>{element.name.common}</h2>
             <h5>Population: {element.population}</h5>
             <h5>Region: {element.region}</h5>
             <h5>Capital: {element.capital}</h5>
